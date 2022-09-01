@@ -1,7 +1,7 @@
 
 import './info.css'
 
-export default function Info() {
+export default function Info() { 
     return (
         <div className="info-container">
             <div className="content">
