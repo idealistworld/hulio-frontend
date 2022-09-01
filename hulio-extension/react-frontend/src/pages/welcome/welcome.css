@@ -52,7 +52,6 @@ body {
 
 button {
     border-radius: 5px;
-    border: 0 solid rgba(0, 0, 0, 0);
     background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%) !important;
     font-weight: 500;
     /*background-image: linear-gradient(to right, #3e0459 0%, #7d2ba4 51%, #530676 100%);*/
@@ -65,6 +64,8 @@ button {
     font-weight: 900;
     font-size: 15px;
     border: 1px solid #AB56FF;
+    background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%) !important;
+
     filter: drop-shadow(0px 0px 7px #8000FF);
     box-shadow: 0px 0px 7px #8000FF inset;
 }

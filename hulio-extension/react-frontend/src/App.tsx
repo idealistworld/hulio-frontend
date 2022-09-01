@@ -18,7 +18,7 @@ function App() {
         <Route path='/info' element={<Info/>} />
         <Route path='/settings' element={<Settings />} />
         <Route path='/advanced-settings' element={<AdvancedSettings />} />
-        {/* <Route path='/tutorials' element={<Tutorials />} /> */}
+        <Route path='/tutorials' element={<Tutorials />} />
       </Routes>
     </Router>
   );

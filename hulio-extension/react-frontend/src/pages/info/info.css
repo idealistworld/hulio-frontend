@@ -63,7 +63,6 @@ button:hover {
     background-image: url("../images/background.jpg");
     filter: drop-shadow(0px 0px 20px #8000FF);
     box-shadow: 0px 0px 20px #8000FF inset;
-    background-image: url("../images/background.jpg");
     border: 2.5px solid #AB56FF;
     border-radius: 20px;
 }
