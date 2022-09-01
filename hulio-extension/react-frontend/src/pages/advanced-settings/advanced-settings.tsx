@@ -8,7 +8,7 @@ export default function AdvancedSettings() {
             <div className="content">
                 <img id="hulioLogo" src={name}></img>
                 <div id="checkboxOptions">
-                    <div className="option">
+                     <div className="option">
                         <label className="inputThing">
                             Show debugging info?
                             <br />

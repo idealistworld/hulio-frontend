@@ -8,8 +8,10 @@
     right: 25px;
     width: 400px;
     border: 1em ridge #e4b827;
-    background-color: #1d1d1d;
-    background-size: cover;
+    background-color: #1c1c1c;
+    filter: drop-shadow(0px 0px 12px #e4b827);
+    box-shadow: 0px 0px 10px #e4b827 inset;
+    border: 1.5px solid #e4b827;
     position: absolute;
     z-index: 10000000;
     border-radius: 12px;

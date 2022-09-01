@@ -5,9 +5,10 @@
   font-family: 'Inter', sans-serif;
   position: fixed;
   width: 400px;
-  border: 1em ridge #6042a6;
-  background-color: #1d1d1d;
-  background-size: cover;
+  background-color: #1c1c1c;
+  filter: drop-shadow(0px 0px 30px #5e38bf);
+  box-shadow: 0px 0px 20px #5e38bf inset;
+  border: 1px solid #AB56FF;
   position: absolute;
   z-index: 10000000;
   border-radius: 12px;
@@ -58,9 +59,11 @@
 
 #button-1 {
   border-radius: 5px;
-  border: 0 solid rgba(0, 0, 0, 0);
   font-weight: 600;
-  background: #5e38bf;
+  border: 1px solid #AB56FF;
+  background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%) !important;
+  filter: drop-shadow(0px 0px 7px #8000FF);
+  box-shadow: 0px 0px 7px #8000FF inset;  
   color: #EDEDED;
   position: relative;
   overflow: hidden;
@@ -79,10 +82,11 @@
 
 .button12345 {
   border-radius: 5px;
-  border: 0 solid rgba(0, 0, 0, 0);
   font-weight: 600;
-  background: #5e38bf;
-  color: #EDEDED;
+  border: 1px solid #AB56FF;
+  background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%) !important;
+  filter: drop-shadow(0px 0px 7px #8000FF);
+  box-shadow: 0px 0px 7px #8000FF inset;  color: #EDEDED;
   position: relative;
   overflow: hidden;
   z-index: 1;

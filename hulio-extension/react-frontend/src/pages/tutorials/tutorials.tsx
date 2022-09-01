@@ -1,4 +1,3 @@
-
 import './tutorials.css'
 
 export default function Tutorials() {
