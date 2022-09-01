@@ -5,8 +5,8 @@
   font-family: 'Inter', sans-serif;
 }
 
-body {
-    background-image: url("../images/background.jpg");
+.tutorials-container {
+    background-image: url("../images/synth.png") !important;
     color: #ededed;
 }
 

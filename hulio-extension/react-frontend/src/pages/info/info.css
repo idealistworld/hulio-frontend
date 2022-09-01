@@ -5,9 +5,11 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
-    background-image: url("../images/background.jpg");
+.info-container {
+    background-image: url("../images/synth.png") !important;
     color: #ededed;
+    height: 100vh;
+    width: 100vw;
 }
 
 .content {
@@ -55,10 +57,14 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: 50%;
     justify-content: space-evenly;
     align-items: center;
     background-image: url("../images/background.jpg");
-    border: 1em ridge #6042a6;
+    filter: drop-shadow(0px 0px 20px #8000FF);
+    box-shadow: 0px 0px 20px #8000FF inset;
+    background-image: url("../images/background.jpg");
+    border: 2.5px solid #AB56FF;
     border-radius: 20px;
 }
 
@@ -82,15 +88,14 @@ button:hover {
 
 .statTitle {
     font-size: 35px;
-    line-height: 50px;
-
+    line-height: 35px;
 }
 
 a {
-    color: rgb(171, 143, 255);
-    font-weight: 700;
+    color: rgb(163, 133, 252);
+    font-weight: 500 !important;
     line-height: 25px;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 a:hover {
