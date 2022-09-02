@@ -9,7 +9,7 @@ const Home = () =>{
             <Navbar />
             <div className="home-content-container">
                     <MiddleContent />
-                    <RightBox />
+                    
             </div>
         </div>
     )

@@ -10,7 +10,6 @@ const Litepaper = () =>{
             <Navbar />
             <div className="home-content-container">
                     <LitepaperLeft />
-                    <RightBox />
             </div>
         </div>
     )

@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .home-container{
     height: 100vh;
+    width: 100vw;
+    background-image: url("./icons/synth.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .home-content-container{
@@ -43,7 +55,7 @@ h3 {
 * {
     margin: 0;
     padding: 0;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Inter', sans-serif;
     color: #EDEDED;
 }
 
@@ -84,9 +96,6 @@ h3 {
 
 body {
     width: 100%;
-    background-image: url("./icons/background.jpg");
-    background-repeat: no-repeat;
-    background-size: stretch;
 }
 
 #middle-content {
@@ -101,15 +110,18 @@ body {
     animation: fade 3.5s linear;
     grid-column: 3 / 4;
     grid-row: 3 / 8;
-    background-color: #212121;
-    background-image: url("./icons/background.jpg");
-    background-repeat: no-repeat;
-    background-size: stretch;
+    background: url("./icons/background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6% 0 0 6%;
-    border: 1em ridge #6042a6;
+    filter: drop-shadow(0px 0px 20px #8000FF);
+    box-shadow: 0px 0px 20px #8000FF inset;
+    border: 2.5px solid #AB56FF;
 }
 
 button:hover {
@@ -117,10 +129,17 @@ button:hover {
 }
 
 #glass {
-    width: 70%;
+    width: 50%;
     border-radius: 6% 0 0 6%;
     animation: bounce 7s infinite linear;
+}
 
+#action-button1:hover .buttonTitle {
+    opacity: 0.5;
+}
+
+#action-button2:hover .buttonTitle {
+    opacity: 0.5;
 }
 
 @keyframes bounce {
@@ -172,69 +191,65 @@ button:hover {
 }
 
 #writing-container {
-    width: 87%;
+    width: 70%;
+    margin-top: 60px;
     padding: 1%;
 }
 
 #writing-title {
     display: inline;
-    font-size: 150%;
+    text-align: center;
+    font-size: 220%;
     font-weight: 900;
 }
 
 #writing-paragraph {
     font-weight: 400;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
     margin: 2% 0 0 0;
+    width: 100%
+}
+
+.paragraph-content {
+    width: 80%;
+    text-align: center;
+}
+
+#writing-paragraph p{ 
+    color: white;
 }
 
 #action-button {
-    width: 100%;
+    text-align: center;
 }
 
 #action-button1 {
-    margin-top: 5%;
-    padding: 3% 8%;
-    background: #5e38bf;
+    margin-top: 30px;
+    width: 35%;
+    padding: 2.5% 8%;
+    font-size: 20px;
     color: #EDEDED;
 }
 
 #action-button2 {
-    margin-top: 5%;
-    margin-left: 3%;
-    padding: 3% 8%;
-}
-
-#action-button1:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: 0;
-    height: 100%;
-    background-color: rgb(242, 241, 239);
-    z-index: -1;
-    -webkit-transition: width 150ms ease-in-out;
-    transition: width 150ms ease-in-out;
-}
-
-#action-button1:hover {
-    color: #343230;
-}
-
-#action-button1:hover:after {
-    width: 110%;
+    margin-top: 30px;
+    width: 35%;
+    padding: 2.5% 8%;
+    font-size: 20px;
+    color: #EDEDED;
+    margin-left: 5%;
 }
 
 button {
     border-radius: 5px;
-    border: 0 solid rgba(0, 0, 0, 0);
+    border: 1px solid #AB56FF;
+     filter: drop-shadow(0px 0px 7px #8000FF);
+    box-shadow: 0px 0px 7px #8000FF inset;  
+    background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%) !important;  
     font-weight: 700;
-    background-color: #212121;
     color: #EDEDED;
-    border-radius: 0;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -243,40 +258,20 @@ button {
 }
 
 
-.glow {
-    font-size: 1em;
-    border-radius: 17px !important;
-    box-shadow: 0px 0px 20px 1.5px rgb(76, 15, 137) !important;
-}
-
-button:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: 0;
-    height: 100%;
-    background: #EDEDED;
-    z-index: -1;
-    -webkit-transition: width 150ms ease-in-out;
-    transition: width 150ms ease-in-out;
-}
 
 button:hover {
     color: #2E2C2A;
-}
-
-button:hover:after {
-    width: 110%;
+    border: 1px solid #cb97ff;
+    filter: drop-shadow(0px 0px 7px #9b38ff);
+   box-shadow: 0px 0px 7px #9b38ff inset;  
 }
 
 #vanity-metrics {
     display: inline-flex;
+    justify-content: center;
     font-weight: 100;
-    font-size: 1.4vw;
+    font-size: 25px;
+    text-align: center;
     width: 100%;
 }
 
@@ -292,10 +287,6 @@ a {
     cursor: pointer;
     text-decoration: none;
     color: #2E2C2A;
-}
-
-a:hover {
-    opacity: 0.5;
 }
 
 .btn-flip {
@@ -470,8 +461,4 @@ a:hover {
     #twitter {
     display: none;
 }
-}
-
-#twitter {
-    height: 1em;
 }
