@@ -34,15 +34,14 @@ body {
     width: 85%;
     filter: drop-shadow(0px 0px 20px #8000FF);
     box-shadow: 0px 0px 20px #8000FF inset;
-    background-image: url("../images/background.jpg");
     border: 2.5px solid #AB56FF;
+    background-image: url("../images/background.jpg");
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     animation: fade 5s linear;
 }
-
 
 #hulioLogo {
     width: 80%;
@@ -54,7 +53,6 @@ button {
     border-radius: 5px;
     background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%) !important;
     font-weight: 500;
-    /*background-image: linear-gradient(to right, #3e0459 0%, #7d2ba4 51%, #530676 100%);*/
     color: #EDEDED;
     position: relative;
     z-index: 1;
@@ -65,7 +63,6 @@ button {
     font-size: 15px;
     border: 1px solid #AB56FF;
     background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%) !important;
-
     filter: drop-shadow(0px 0px 7px #8000FF);
     box-shadow: 0px 0px 7px #8000FF inset;
 }
