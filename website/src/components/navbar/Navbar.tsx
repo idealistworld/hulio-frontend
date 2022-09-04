@@ -22,7 +22,7 @@ const Navbar = () =>{
                             <h1 className="link">Contact</h1>
                         </Link>
                     </div>
-                    <button className="install-button">
+                    <button className="install-button" onClick = {() => window.open('https://chrome.google.com/webstore/detail/hulio/olikokhekcibedhfkhbkmphgmopigibb')}>
                         Add to Browser
                     </button>
                 </div>

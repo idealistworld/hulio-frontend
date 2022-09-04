@@ -82,7 +82,7 @@
 }
 
 .install-button {
-    padding: 1%;
+    padding: 1.5%;
 }
 
 body {
@@ -302,7 +302,6 @@ a {
 .features-container {
   
 }
-
 
 @media only screen and (max-device-width: 525px) {
 

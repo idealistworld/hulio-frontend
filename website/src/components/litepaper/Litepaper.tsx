@@ -98,7 +98,7 @@ const Litepaper = () => {
                     <br />
                     more coming soon...</p>
             </div>
-            <div className="infoButtons"><button id="action-button1">Pitch Deck</button> <button id="action-button2">Pitch Video</button></div>
+            <div className="infoButtons"><button id="action-button1" onClick = {() => window.open('https://docs.google.com/presentation/d/1voLaGQ93hmkyzcT5xl4rcQb-_wgRvSuW7KEf2tH71cE/edit?usp=sharing')}>Pitch Deck</button> <button id="action-button2" onClick = {() => window.open('https://youtu.be/Dq0MKkCk99s')}>Pitch Video</button></div>
         </div>
     )
 }
