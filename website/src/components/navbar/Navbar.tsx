@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import name from '../../styles/icons/name.svg'
 import '../../styles/styles.css'
-
-
+import React from 'react';
 
 const Navbar = () =>{
     return(
@@ -19,7 +18,7 @@ const Navbar = () =>{
                         <Link to='/litepaper'>
                             <h1 className="link">Litepaper</h1>
                         </Link>
-                        <Link to='/'>
+                        <Link to='/contact'>
                             <h1 className="link">Contact</h1>
                         </Link>
                     </div>

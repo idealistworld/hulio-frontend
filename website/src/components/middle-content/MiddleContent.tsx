@@ -1,4 +1,4 @@
-import twitter from '../../styles/icons/twitter.png'
+import React from 'react';
 
 const MiddleContent = () =>{
     return (
@@ -9,17 +9,17 @@ const MiddleContent = () =>{
                                     data-period="2000"
                                     data-rotate={[ "crypto", "web3", "NFTs", "DeFi", "GameFi" ]}></span>".</h1>
                         </div>
-                        <div id="writing-paragraph">
-                            <p className = "paragraph-content">Learn your way around the ecosystem, stay safe, and even earn free Solana with ease. hulio helps activate passive crypto holders to become active web3 users. Whether a newcomer or veteran, hulio will enhance your adventures in the world of
-                                crypto!</p>
-                        </div>
                         <div id="action-button">
                             <button id="action-button1">
                                 <div className = "buttonTitle">Download</div>
                             </button>
                             <button id="action-button2">
-                                <div className = "buttonTitle">Our Twitter</div>
+                                <div className = "buttonTitle">Twitter</div>
                             </button>
+                        </div>
+                        <div id="writing-paragraph">
+                            <p className = "paragraph-content">Learn your way around the ecosystem, stay safe, and even earn free Solana with ease. hulio helps activate passive crypto holders to become active web3 users. Whether a newcomer or veteran, hulio will enhance your adventures in the world of
+                                crypto!</p>
                         </div>
                         <div id="vanity-metrics">
                             <div id="vanity1">

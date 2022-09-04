@@ -1,7 +1,6 @@
-import LitepaperLeft from "../components/litepaper/LitepaperLeft";
+import LitepaperElement from "../components/litepaper/Litepaper";
 import MiddleContent from "../components/middle-content/MiddleContent";
 import Navbar from "../components/navbar/Navbar";
-import RightBox from "../components/right-box/RightBox";
 
 
 const Litepaper = () =>{
@@ -9,7 +8,7 @@ const Litepaper = () =>{
         <div className="home-container">
             <Navbar />
             <div className="home-content-container">
-                    <LitepaperLeft />
+                    <LitepaperElement/>
             </div>
         </div>
     )
