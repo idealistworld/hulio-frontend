@@ -3,9 +3,10 @@
 const Litepaper = () => {
     return (
         <div className="litepaper-container" id = "writing">
+            <h1 id = "litepaper-title">hulio Litepaper</h1>
             <div style={{
                 color: 'white', borderRadius: '7px', padding: '3%', backgroundImage: 'linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%)'
-                , height: '315px', width: '60%', border: '1px solid #4e4e4e', overflow: 'auto', filter: 'drop-shadow(0px 0px 20px #8000FF)',
+                , height: '220px', width: '60%', border: '1px solid #4e4e4e', overflow: 'auto', filter: 'drop-shadow(0px 0px 20px #8000FF)',
                 boxShadow: '0px 0px 20px #8000FF inset', borderWidth: '2.5px', borderColor: "#AB56FF"
             }} className="scroll">
                 <p style={{ color: 'white' }}><h3>hulio.app Litepaper</h3>

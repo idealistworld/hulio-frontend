@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect } from 'react';
 
 const MiddleContent = () =>{
     return (
@@ -39,5 +39,7 @@ const MiddleContent = () =>{
                 </div>
     )
 }
+
+
 
 export default MiddleContent;
