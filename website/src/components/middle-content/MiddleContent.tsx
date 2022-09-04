@@ -1,6 +1,7 @@
 import React, {useEffect } from 'react';
 
 const MiddleContent = () =>{
+    
     return (
         <div id="writing">
                     <div id="writing-container">
