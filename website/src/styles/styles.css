@@ -267,13 +267,14 @@ a {
 
 #contact-title {
     font-size: 600%;
+    text-align: center;
 }
 
 #contact-paragraph {
     text-align: center;
     font-weight: 200;
     font-size: 1.2em;
-    width: 80%;
+    width: 70%;
     margin: 2% 0 0 0;
 }
 
@@ -307,12 +308,12 @@ a {
 
     body {
         background: url("./icons/background.jpg") no-repeat center center fixed;
-        height: 100vh;
-        width: 100vw;
         -webkit-background-size: stretch;
         -moz-background-size: stretch;
         -o-background-size: stretch;
         background-size: cover;
+        height: 100vh;
+        width: 100vw;
         position: fixed;
         margin: 0;
         padding: 0;

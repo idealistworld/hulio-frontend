@@ -11,7 +11,7 @@ const MiddleContent = () => {
                         data-rotate={["crypto", "web3", "NFTs", "DeFi", "GameFi"]}></span>".</h1>
                 </div>
                 <div id="action-button">
-                <button id="action-button2" onClick = {() => window.open('https://chrome.google.com/webstore/detail/hulio/olikokhekcibedhfkhbkmphgmopigibb')}>
+                <button id="action-button1" onClick = {() => window.open('https://chrome.google.com/webstore/detail/hulio/olikokhekcibedhfkhbkmphgmopigibb')}>
                         <div className="buttonTitle">Download</div>
                     </button>
                     <button id="action-button2" onClick = {() => window.open('https://twitter.com/hulioapp')}>
