@@ -1,45 +1,36 @@
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import name from '../images/name.svg'
 import './settings.css'
+import {
+    saveOptions,
+    restoreOptions,
+    updateIgnoreSitesList,
+    showIgnoreWarnRetype,
+    showIgnoreWarn,
+    showAll
+} from './settingsFunctions'
 
 export default function Settings(){
 
-    // Saves options to chrome.storage
-    function save_options() {
-        var warningCBox = document.getElementById('warningCBox').checked;
-        var retypingCBox = document.getElementById('retypingCBox').checked;
-        var tutorialsCBox = document.getElementById('tutorialsCBox').checked;
-        chrome.storage.local.set({
-        warningCBox: warningCBox,
-        retypingCBox: retypingCBox,
-        tutorialsCBox: tutorialsCBox,
-        }, function () {
-            // Update status to let user know options were saved.
-            var status = document.getElementById('status');
-            if(status) {
-                status.textContent = 'Options saved.';
-                setTimeout(function () {
-                    if(status) status.textContent = '';
-                }, 750);
-            }
-        });
-        
-        
-    }
-
-    // Restores select box and checkbox state using the preferences
-    // stored in chrome.storage.
-    function restore_options() {
-        // Use default value color = 'red' and likesColor = true.
-        chrome.storage.local.get({
-        warningCBox: true,
-        retypingCBox: true,
-        tutorialsCBox: true,
-        }, function (items) {
-        document.getElementById('warningCBox').checked = items.warningCBox;
-        document.getElementById('retypingCBox').checked = items.retypingCBox;
-        document.getElementById('tutorialsCBox').checked = items.tutorialsCBox;
-        });
-    }
+    useEffect(() =>{
+        var el2 = document.getElementById('updateSafeSites')
+        if (el2) {
+            el2.addEventListener('click', updateSafeSitesList)
+        }
+        var el3 = document.getElementById('updateIgnoreSitesButton')
+        if (el3) {
+            el3.addEventListener('click', updateIgnoreSitesList)
+        }
+        var el4 = document.getElementById('showIgnoreWarnRetypeSites')
+        if (el4) {
+            el4.addEventListener('click', showIgnoreWarnRetype)
+        }
+        var el5 = document.getElementById('showIgnoreWarnSites')
+        if (el5) {
+            el5.addEventListener('click', showIgnoreWarn)
+        }
+    }, [])
 
     return(
         <div className="settings-container">
@@ -71,9 +62,11 @@ export default function Settings(){
 
                 </div>
                 <div id="status"></div>
-                <button id="save">Save</button>
-                <button id="advancedSettings">Advanced Settings</button>
-                <button id="showAllLists">Show All Lists</button>
+                <button id="save" onClick={saveOptions}>Save</button>
+                <Link to='/advanced-settings'>
+                    <button id="advancedSettings">Advanced Settings</button>
+                </Link>
+                <button id="showAllLists" onClick={showAll}>Show All Lists</button>
             </div>
         </div>
     )
