@@ -3,10 +3,6 @@ import ReactRotatingText from 'react-rotating-text';
 
 const MiddleContent = () => {
 
-    useEffect(() =>{
-
-    }, [])
-
     return (
         <div id="writing">
             <div id="writing-container">
