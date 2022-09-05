@@ -2,19 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-    background-image: url('../images/synth.png');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family: 'Inter', sans-serif;
     color: #ededed;
 }
 
 .welcome-container {
     background-image: url('../images/synth.png');
     width: 100vw;
-    height: 100vh
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
 }
 
 .content {
@@ -61,10 +60,9 @@ button {
     width: 100%;
     font-weight: 900;
     font-size: 15px;
-    border: 1px solid #AB56FF;
-    background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%) !important;
-    filter: drop-shadow(0px 0px 7px #8000FF);
-    box-shadow: 0px 0px 7px #8000FF inset;
+    border: 1px solid #AB56FF !important;
+    filter: drop-shadow(0px 0px 7px #8000FF) !important;
+    box-shadow: 0px 0px 7px #8000FF inset !important;
 }
 
 button:hover {
