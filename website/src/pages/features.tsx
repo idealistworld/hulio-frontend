@@ -1,18 +1,18 @@
-import HomePage from "../components/home-page/HomePage";
+import LitepaperElement from "../components/litepaper/Litepaper";
 import MiddleContent from "../components/middle-content/MiddleContent";
 import Navbar from "../components/navbar/Navbar";
-import React from 'react';
+import Features from '../components/features/features'
 
 
-const Home = () =>{
-        return(
+const FeaturesPage = () =>{
+    return (
         <div className="home-container">
             <Navbar />
             <div className="home-content-container">
-                    <MiddleContent />
+                    <Features/>
             </div>
         </div>
     )
 }
 
-export default Home;
+export default FeaturesPage;
