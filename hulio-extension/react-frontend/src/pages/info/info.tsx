@@ -1,16 +1,18 @@
 import api from '../../utils/api';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 import './info.css'
 
 export default function Info() {  
-    let { url } = useParams();
+    const [searchParams, setSearchParams] = useSearchParams();
+    let url = searchParams.get('url');
 
     const addressName = "Hulio Team"
     const address = "2v155UE19ghxH5CoUpBZQwjtYKHR9g4z7eS5qhPgJxTy"
     let tx_hash:string = '', date_created:any = null;
 
     const getData = async () =>{
+        console.log(url)
         const response = await api.get(`/website/get_website/${url}`);
 
         console.log(response)
@@ -37,10 +39,10 @@ export default function Info() {
                     </div>
                     <div className="stat">
 
-                        <h1 className="statTitle">Verified Web URL </h1> <a className = "data" id="verifiedWebURLLink" target="_blank" href={url}><p id="verifiedWebURL">{url}</p></a>
+                        <h1 className="statTitle">Verified Web URL </h1> <a className = "data" id="verifiedWebURLLink" target="_blank" href={url ? url : ''}><p id="verifiedWebURL">{url ? url : 'Not Available'}</p></a>
                     </div>
                     <div className="stat">
-                        <h1 className="statTitle">Website Signed</h1> <a className = "data" id="websiteSignedLink" target="_blank" href={url}><p id="websiteSigned">{url}</p></a>
+                        <h1 className="statTitle">Website Signed</h1> <a className = "data" id="websiteSignedLink" target="_blank" href={url ? url : ''}><p id="websiteSigned">{url ? url : 'Not Available'}</p></a>
                     </div>
                 </div>
             </div>
