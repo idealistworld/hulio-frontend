@@ -14,22 +14,7 @@ import {
 export default function Settings(){
 
     useEffect(() =>{
-        var el2 = document.getElementById('updateSafeSites')
-        if (el2) {
-            el2.addEventListener('click', updateSafeSitesList)
-        }
-        var el3 = document.getElementById('updateIgnoreSitesButton')
-        if (el3) {
-            el3.addEventListener('click', updateIgnoreSitesList)
-        }
-        var el4 = document.getElementById('showIgnoreWarnRetypeSites')
-        if (el4) {
-            el4.addEventListener('click', showIgnoreWarnRetype)
-        }
-        var el5 = document.getElementById('showIgnoreWarnSites')
-        if (el5) {
-            el5.addEventListener('click', showIgnoreWarn)
-        }
+        restoreOptions();
     }, [])
 
     return(
