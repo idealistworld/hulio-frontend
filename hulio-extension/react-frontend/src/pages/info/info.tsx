@@ -1,5 +1,5 @@
 import api from '../../utils/api';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom'
 import './info.css'
 
@@ -9,16 +9,26 @@ export default function Info() {
 
     const addressName = "Hulio Team"
     const address = "2v155UE19ghxH5CoUpBZQwjtYKHR9g4z7eS5qhPgJxTy"
-    let tx_hash:string = '', date_created:any = null;
+
+    const [tx_hash, setTx_hash] = useState('Loading...');
+    const [date_created, setDate_created] = useState('Loading...');
+    const [response_url, setResponse_url] = useState('Loading...');
 
     const getData = async () =>{
         console.log(url)
+        if(url?.includes('https://www.')){
+            url = url.substring(12, url.length);
+        }
+        else if(url?.includes('https://')){
+            url = url.substring(8, url.length);
+        }
+        console.log(url)
         const response = await api.get(`/website/get_website/${url}`);
 
-        console.log(response)
-
-        // tx_hash = response.tx_hash;
-        // date_created = response.date_created;
+        const data = response.data.result.rows[0];
+        setTx_hash(data.tx_hash);
+        setDate_created(data.date_created);
+        setResponse_url(data.url);
     }
 
     useEffect(() =>{
@@ -35,14 +45,14 @@ export default function Info() {
                     </div>
                     <div className="stat">
 
-                        <h1 className="statTitle">Transaction Hash</h1> <a className = "data" id="transactionHashLink" target="_blank" href={"https://solscan.io/tx/" + tx_hash}><p id="transactionHash">{tx_hash != '' ? tx_hash.slice(0,23) + "..." : 'Not Available'}</p></a>
+                        <h1 className="statTitle">Transaction Hash</h1> <a className = "data" id="transactionHashLink" target="_blank" href={"https://solscan.io/tx/" + tx_hash}><p id="transactionHash">{tx_hash.slice(0,23) + "..."}</p></a>
                     </div>
                     <div className="stat">
 
                         <h1 className="statTitle">Verified Web URL </h1> <a className = "data" id="verifiedWebURLLink" target="_blank" href={url ? url : ''}><p id="verifiedWebURL">{url ? url : 'Not Available'}</p></a>
                     </div>
                     <div className="stat">
-                        <h1 className="statTitle">Website Signed</h1> <a className = "data" id="websiteSignedLink" target="_blank" href={url ? url : ''}><p id="websiteSigned">{url ? url : 'Not Available'}</p></a>
+                        <h1 className="statTitle">Website Signed</h1> <a className = "data" id="websiteSignedLink" target="_blank" href={url ? url : ''}><p id="websiteSigned">{response_url}</p></a>
                     </div>
                 </div>
             </div>
