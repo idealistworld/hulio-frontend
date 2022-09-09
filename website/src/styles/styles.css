@@ -95,7 +95,6 @@ body {
 }
 
 .litepaper-container {
-    margin-top: 3%;
     display: flex;
 }
 
@@ -184,6 +183,21 @@ button:hover {
     font-size: 19px;
     color: #EDEDED;
     margin-left: 7%;
+}
+
+.scroll {
+    color: white;
+    border-radius: 7px;
+    padding: 3%;
+    background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%);
+    height: 220px;
+    width: 60%;
+    border: 1px solid #4e4e4e;
+    overflow: scroll;
+    filter: drop-shadow(0px 0px 20px #8000FF);
+    box-shadow: 0px 0px 20px #8000FF inset;
+    border-width: 2.5px;
+    border-color: #AB56FF;
 }
 
 button {
@@ -435,7 +449,6 @@ a {
     }
 }
 
-
 @media only screen and (max-device-width: 450px) {
     #writing-container {
         width: 83%;
@@ -486,5 +499,59 @@ a {
 
     #banner-logo {
         height: 6vw !important;
+    }
+
+    #features-title {
+        font-size: 15vw;
+    }
+
+    .features-container {
+       margin-top: 12%;
+    }
+
+    #litepaper-title {
+        text-align: center;
+        font-size: 15vw;
+        margin-bottom: 30px;
+    }
+
+    .litepaper-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .scroll {
+        color: white;
+        border-radius: 7px;
+        padding: 3%;
+        background-image: linear-gradient(to right, #101010 0%, #1a1a1a 51%, #101010 100%);
+        height: 400px;
+        width: 80%;
+        border: 1px solid #4e4e4e;
+        overflow: scroll;
+        filter: drop-shadow(0px 0px 20px #8000FF);
+        box-shadow: 0px 0px 20px #8000FF inset;
+        border-width: 2.5px;
+        border-color: #AB56FF;
+    }
+
+    .infoButtons {
+        width: 85%;
+        margin: 0;
+    }
+
+    #contact-title {
+        font-size: 18vw;
+        text-align: center;
+    }
+
+    #contact-paragraph {
+        text-align: center;
+        font-weight: 200;
+        font-size: 1.2em;
+        width: 100%;
     }
 }
