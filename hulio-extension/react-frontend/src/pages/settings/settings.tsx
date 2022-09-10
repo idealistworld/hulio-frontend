@@ -1,7 +1,22 @@
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import name from '../images/name.svg'
 import './settings.css'
+import {
+    saveOptions,
+    restoreOptions,
+    updateIgnoreSitesList,
+    showIgnoreWarnRetype,
+    showIgnoreWarn,
+    showAll
+} from './settingsFunctions'
 
 export default function Settings(){
+
+    useEffect(() =>{
+        restoreOptions();
+    }, [])
+
     return(
         <div className="settings-container">
             <div className="content">
@@ -32,9 +47,11 @@ export default function Settings(){
 
                 </div>
                 <div id="status"></div>
-                <button id="save">Save</button>
-                <button id="advancedSettings">Advanced Settings</button>
-                <button id="showAllLists">Show All Lists</button>
+                <button id="save" onClick={saveOptions}>Save</button>
+                <Link to='/advanced-settings'>
+                    <button id="advancedSettings">Advanced Settings</button>
+                </Link>
+                <button id="showAllLists" onClick={showAll}>Show All Lists</button>
             </div>
         </div>
     )
